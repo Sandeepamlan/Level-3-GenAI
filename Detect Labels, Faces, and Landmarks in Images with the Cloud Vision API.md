@@ -1,3 +1,4 @@
+```cmd
 gcloud alpha services api-keys create --display-name="Sandeep" 
 KEY_NAME=$(gcloud alpha services api-keys list --format="value(name)" --filter "displayName=Sandeep")
 export API_KEY=$(gcloud alpha services api-keys get-key-string $KEY_NAME --format="value(keyString)")
@@ -10,3 +11,4 @@ gsutil cp practice/city.png gs://$PROJECT_ID
 gsutil acl ch -u AllUsers:R gs://$PROJECT_ID/donuts.png
 gsutil acl ch -u AllUsers:R gs://$PROJECT_ID/selfie.png
 gsutil acl ch -u AllUsers:R gs://$PROJECT_ID/city.png
+```
